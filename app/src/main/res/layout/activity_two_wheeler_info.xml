@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".TwoWheelerInfo">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="5dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Vehicle Model"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="22sp"
+            android:id="@+id/editTextVehicleModelId"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="5dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Mileage"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="22sp"
+            android:id="@+id/editTextMileageId"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="5dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Daily Travel(Kms)"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="22sp"
+            android:id="@+id/editTextDailyTravelId"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:id="@+id/radioGroupVTypeId">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Type:"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bike"
+            android:layout_marginLeft="10dp"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            android:id="@+id/radioButtonBikeId"
+            android:checked="true"
+            android:onClick="checkVType"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moped"
+            android:layout_marginLeft="10dp"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            android:id="@+id/radioButtonMopedId"
+            android:onClick="checkVType"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:id="@+id/radioGroupFTypeId">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuel Type:"
+            android:textSize="22sp"
+            android:textColor="#000000"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petrol"
+            android:layout_marginLeft="40dp"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            android:id="@+id/radioButtonPetrolId"
+            android:checked="true"
+            android:onClick="checkFType"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diesel"
+            android:layout_marginLeft="10dp"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            android:id="@+id/radioButtonDieselId"
+            android:onClick="checkFType"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Submit Form"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_rounded"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:id="@+id/buttonSubmitFormId"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/VMID"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/MID"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/DTID"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/VID"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/FID"/>
+
+</LinearLayout>
